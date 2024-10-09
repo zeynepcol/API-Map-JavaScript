@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Giriş Yap / Kayıt Ol</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+        margin-bottom: 20px;
+        color: #333;
+        }
+
+        .login-container .input-container {
+        position: relative;
+        margin: 10px 0;
+        }
+
+        .login-container .input-container input {
+        width: calc(100% - 60px);       /* Metin kutusunun genişliği */
+        padding: 10px 20px 10px 40px;   /* Üst, sağ, alt, sol iç boşluklar */
+        border: 1px solid #ddd;         /* Kenar çizgisi */
+        border-radius: 4px;             /* Kenarların yuvarlanması */
+        }
+
+        .login-container .input-container .icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        }
+
+        .login-container button {
+        background-color: #1094F6;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        }
+
+        .login-container button:hover {
+        background-color: #0e7bcc;
+        }
+
+        .login-container a {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #1094F6;
+        }
+
+        .login-container a:hover {
+        text-decoration: underline;
+        }
+
+        .password-strength {
+        margin: 10px 0;
+        text-align: left;
+        font-size: 12px;
+        }
+
+        .password-strength span {
+        display: inline-block;
+        width: 100%;
+        height: 5px;
+        margin-top: 5px;
+        background: #ddd;
+        }
+
+        .password-strength span.weak {
+        background: red;
+        }
+
+        .password-strength span.medium {
+        background: orange;
+        }
+
+        .password-strength span.strong {
+        background: green;
+        }
+
+        .toggle-container {
+        margin-top: 20px;
+        cursor: pointer;
+        color: #1094F6;
+        }
+
+        .toggle-container:hover {
+        text-decoration: underline;
+        }
+
+        #registerForm {
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 id="formTitle">GİRİŞ YAP</h2>
+        <form id="loginForm">
+            <div class="input-container">
+                <span class="icon">📧</span>
+                <input type="email" id="email" name="email" placeholder="E-posta" required />
+            </div>
+            <div class="input-container">
+                <span class="icon">🔑</span>
+                <input type="password" id="sifre" name="sifre" placeholder="Şifre" required />
+            </div>
+            <div class="password-strength" id="passwordStrength">
+                <span></span>
+            </div>
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <div class="toggle-container" onclick="toggleForms()">Hesabım yok, Kayıt Ol</div>
+        <form id="registerForm">
+            <div class="input-container">
+                <span class="icon">👤</span>
+                <input type="text" id="registerAd" name="ad" placeholder="Ad" required />
+            </div>
+            <div class="input-container">
+                <span class="icon">👤</span>
+                <input type="text" id="registerSoyad" name="soyad" placeholder="Soyad" required />
+            </div>
+            <div class="input-container">
+                <span class="icon">📧</span>
+                <input type="email" id="registerEmail" name="email" placeholder="E-posta" required />
+            </div>
+            <div class="input-container">
+                <span class="icon">🔑</span>
+                <input type="password" id="registerSifre" name="sifre" placeholder="Şifre" required />
+            </div>
+            <div class="password-strength" id="registerPasswordStrength">
+                <span></span>
+            </div>
+            <button type="submit">Kayıt Ol</button>
+        </form>
+        <a href="Index.html">Ana Sayfaya Dön</a>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const sifre = document.getElementById('sifre').value;
+
+            if (email && sifre) {
+                window.location.href = 'Index.html';
+            }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const ad = document.getElementById('registerAd').value;
+            const soyad = document.getElementById('registerSoyad').value;
+            const email = document.getElementById('registerEmail').value;
+            const sifre = document.getElementById('registerSifre').value;
+
+            if (ad && soyad && email && sifre) {
+                window.location.href = 'Index.html';
+            }
+        });
+
+        document.getElementById('sifre').addEventListener('input', function () {
+            const sifre = document.getElementById('sifre').value;
+            const strengthBar = document.getElementById('passwordStrength').children[0];
+
+            if (sifre.length < 6) {
+                strengthBar.className = 'weak';
+            } else if (sifre.length >= 6 && sifre.length < 10) {
+                strengthBar.className = 'medium';
+            } else if (sifre.length >= 10) {
+                strengthBar.className = 'strong';
+            } else {
+                strengthBar.className = '';
+            }
+        });
+
+        document.getElementById('registerSifre').addEventListener('input', function () {
+            const sifre = document.getElementById('registerSifre').value;
+            const strengthBar = document.getElementById('registerPasswordStrength').children[0];
+
+            if (sifre.length < 6) {
+                strengthBar.className = 'weak';
+            } else if (sifre.length >= 6 && sifre.length < 10) {
+                strengthBar.className = 'medium';
+            } else if (sifre.length >= 10) {
+                strengthBar.className = 'strong';
+            } else {
+                strengthBar.className = '';
+            }
+        });
+
+        function toggleForms() {
+            const formTitle = document.getElementById('formTitle');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            if (registerForm.style.display === 'none') {
+                registerForm.style.display = 'block';
+                loginForm.style.display = 'none';
+                formTitle.innerText = 'KAYIT OL';
+                document.querySelector('.toggle-container').innerText = 'Hesabım var, Giriş Yap';
+            } else {
+                registerForm.style.display = 'none';
+                loginForm.style.display = 'block';
+                formTitle.innerText = 'Giriş Yap';
+                document.querySelector('.toggle-container').innerText = 'Hesabım yok, Kayıt Ol';
+            }
+        }
+    </script>
+</body>
+</html>
