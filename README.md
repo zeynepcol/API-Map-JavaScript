@@ -1,4 +1,4 @@
-<h3 align="center">TR Map JS API project by @zeynepcol</h3>
+<h1 align="center">TR Map JS API project by @zeynepcol</h1>
 
 https://github.com/user-attachments/assets/168716e2-35e8-4c22-9a82-43a0895402ba
 
