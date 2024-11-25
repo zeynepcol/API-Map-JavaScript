@@ -11,37 +11,35 @@ https://github.com/user-attachments/assets/168716e2-35e8-4c22-9a82-43a0895402ba
 
 <p>A modern full-stack API application built using C# and .NET, showcasing robust backend architecture and a responsive, user-friendly frontend.</p>
 
-    <hr>
+<h2>FEATURES ✨</h2>
+<ul>
+    <li><strong>Interactive Map</strong>Visual representation of data through an interactive map of TR using SVG and JavaScript. </li>
+    <li><strong>Backend:</strong> Powered by .NET with RESTful APIs for seamless communication.</li>
+    <li><strong>Frontend:</strong> Responsive and dynamic user interfaces built with modern web technologies.</li>
+    <li><strong>Database:</strong> Efficient data storage and retrieval using MSSQL.</li>
+    <li><strong>CRUD operations</strong>  for managing resources with ease.</li>
+    <li><strong>API Integration:</strong>Demonstrate API calls and handle JSON responses effectively.</li>
+    <li><strong>API Testing:</strong> The Web API has been rigorously tested using <strong> Swagger </strong>  to ensure accurate and secure data retrieval.</li>
 
-    <h2>FEATURES ✨</h2>
-    <ul>
-       <li><strong>Interactive Map</strong>Visual representation of data through an interactive map of TR using SVG and JavaScript. </li>
-        <li><strong>Backend:</strong> Powered by .NET with RESTful APIs for seamless communication.</li>
-        <li><strong>Frontend:</strong> Responsive and dynamic user interfaces built with modern web technologies.</li>
-        <li><strong>Database:</strong> Efficient data storage and retrieval using MSSQL.</li>
-        <li><strong>CRUD operations</strong>  for managing resources with ease.</li>
-        <li><strong>API Integration:</strong>Demonstrate API calls and handle JSON responses effectively.</li>
-        <li><strong>API Testing:</strong> The Web API has been rigorously tested using <strong> Swagger </strong>  to ensure accurate and secure data retrieval.</li>
+        
+</ul>
 
+<hr>
 
-    </ul>
-
-    <hr>
-
-    <h2>TECH STACK  💻</h2>
-    <ul>
+<h2>TECH STACK  💻</h2>
+<ul>
         <li><strong>Backend:</strong> C#, .NET, ASP.NET Core</li>
         <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
         <li><strong>Database:</strong> MSSQL</li>
         <li><strong>API:</strong> Google Maps API</li>
         <li><strong>Test:</strong>Swagger</li>
 
-    </ul>
+</ul>
 
-    <hr>
+<hr>
 
-    <h2>SETUP INSTRUCTIONS ⚙️</h2>
-    <ol>
+<h2>SETUP INSTRUCTIONS ⚙️</h2>
+<ol>
         <li><strong>Clone the repository:</strong></li>
         <pre><code>git clone https://github.com/yourusername/yourproject.git</code></pre>
         <li><strong>Navigate to the project directory:</strong></li>
@@ -56,20 +54,20 @@ https://github.com/user-attachments/assets/168716e2-35e8-4c22-9a82-43a0895402ba
             <li>Open the solution in Visual Studio.</li>
             <li>Restore dependencies and run the project.</li>
         </ul>
-    </ol>
+</ol>
 
-    <hr>
+<hr>
 
 
-    <h2>CONTRIBUTING 🤝 </h2>
-    <p>Your contributions are always welcome and important to me! If you’d like to support the project or suggest improvements:</p>
+<h2>CONTRIBUTING 🤝 </h2>
+<p>Your contributions are always welcome and important to me! If you’d like to support the project or suggest improvements:</p>
 
-    <ol>
+<ol>
         <li>Fork the repository.</li>
         <li>Create a new branch (<code>feature-name</code>).</li>
         <li>Commit your changes.</li>
         <li>Push to the branch and submit a pull request.</li>
-    </ol>
-  <hr>
+</ol>
+<hr>
 </body>
 </html>
