@@ -86,11 +86,9 @@
     };
 
     const ilIsimleriDiv = document.querySelector('.il-isimleri');
-    //zeynep start
     const tabloDiv = document.createElement('div');
     tabloDiv.classList.add('sehir-tablosu');
     document.body.appendChild(tabloDiv);
-    //zeynep end
     document.querySelectorAll('#Harita g').forEach(function (il) {
         const plakaKodu = il.getAttribute('data-plakakodu');
 
@@ -118,7 +116,6 @@
             ilIsimleriDiv.innerHTML = '';
         });
 
-        //ZEYNEP START
         il.addEventListener('click', function () {
             const sehirBilgi = sehirVerileri[plakaKodu];
             if (sehirBilgi) {
@@ -139,11 +136,8 @@
         `;
             }
         });
-        // ZEYNEP END
     });
-    //ZEYNEP START
 
-    // Sidebar tıklama olayları
     document.querySelectorAll('.sidebar a').forEach(function (link) {
         link.addEventListener('click', function (event) {
             event.preventDefault();
