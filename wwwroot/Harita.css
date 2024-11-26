@@ -2,10 +2,10 @@
     max-width: 1140px;
     margin: 0 auto;
     text-align: center;
-    position: relative;     /* Haritayı içine alacak bir relative position */
-    margin-top: 180px;      /* Haritanın üstteki boşluğu ayarlamak için */
-    margin-bottom: 50px;    /* Haritanın alttaki boşluğu ayarlamak için */
-    margin-left: 25%;       /* Haritayı sağa kaydırmak için sol margin ekliyoruz */
+    position: relative;    
+    margin-top: 180px;      
+    margin-bottom: 50px;   
+    margin-left: 25%;     
     }
 
     .Harita svg {
@@ -64,16 +64,15 @@
     display: block;
     text-decoration: none;
     color: #333;
-    font-family: 'Open Sans', sans-serif; /* Change font family here */
-    font-weight: bold; /* Make the font bold */
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: bold; 
     }
 
     .sidebar a:hover {
     background-color: #ff0000; /* Red color for hover */
-    color: #fff; /* Change text color on hover */
+    color: #fff; 
     }
 
-    /*sehir tablos düzenlendi 17 temmuz*/
     .sehir-tablosu {
     width: 70%;
     margin: 20px auto;
@@ -82,9 +81,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     border-radius: 8px;
-    position: relative; /* Position relative for alignment adjustments */
-    left: 12%; /* Adjust this value to shift the table to the right */
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    position: relative; 
+    left: 12%; 
+    box-sizing: border-box; 
     font-family: 'Open Sans', sans-serif;
     }
 
@@ -127,4 +126,3 @@
     background-color: #ff0000;
     color: #fff;
     }
-
