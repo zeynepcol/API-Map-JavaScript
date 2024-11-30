@@ -19,9 +19,7 @@ namespace WebApplication1.Models
         public int projectCount { get; set; }
 
       
-        //zeynep start
         public int categoryID { get; set; }
-        //zeynep end
 
         public ICollection<Category> categories { get; set; }
     }
