@@ -99,9 +99,7 @@ namespace WebApplication1.Controllers
         }
 
 
-        //22222222222222222222222222222222222222222222222222222222222222
-
-        // ikinci HTTP method: {category}  kısmı 
+        // second HTTP method: {category}  part 
 
 
         [HttpGet("category/{category}")]
@@ -121,8 +119,6 @@ namespace WebApplication1.Controllers
 
 
 
-        //3. KISIM başlangıç
-        // Belirli bir kategoriye sahip tüm şehirleri listeleyen endpoint
         [HttpGet("category/{category}/cities")]
         public async Task<IActionResult> GetCitiesWithCategory(string category)
         {
@@ -134,12 +130,10 @@ namespace WebApplication1.Controllers
                 return NotFound();
             }
 
-            // 3.1 kısım başlnagı.
             var citiesWithCategory = await _context.Citieses
                  .Where(c => c.categoryID == categoryData.categoryID)
                  .ToListAsync();
 
-            //değişiklik ifin içinde oldu
             if (citiesWithCategory == null || !citiesWithCategory.Any())
             {
                 return NotFound();
@@ -159,13 +153,6 @@ namespace WebApplication1.Controllers
 
             return Ok(result);
         }
-        //3.1 son
-
-
-
-
-        //3.kısım son
-
 
         // POST api/citydata/category
         [HttpPost("category")]
@@ -234,4 +221,3 @@ namespace WebApplication1.Controllers
 
     }
 }
-
